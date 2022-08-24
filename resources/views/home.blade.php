@@ -13,66 +13,21 @@
         </div>  
     </div>
     <div class="flex gap-5 my-4 px-10">
-        <div class="w-1/6">
+      @foreach ($courses as $item)
+      <div class="w-1/6">
+        <a href="{{route('view',$item->id)}}" class="">
             <div class="bg-white rounded-lg border shadow">
                 <div class="p-2">
-                    <img src="https://codewithsadiq.com/public/images/course/1639911906.jpg" alt="">
+                    <img src="{{asset("course_images/".$item->image)}}" alt="">
                     <hr>
-                    <h2>Python With Data Structure</h2>
+                    <h2>{{$item->title}}</h2>
                 </div>
-                <div class="bg-teal-800 font-bold text-white w-full p-3 rounded-bl-lg rounded-br-lg">Duration: 4 Months</div>
+                <div class="bg-teal-800 font-bold text-white w-full p-3 rounded-bl-lg rounded-br-lg">Duration: {{$item->duration}} Months</div>
             </div>
-        </div>
-        <div class="w-1/6">
-            <div class="bg-white rounded-lg border shadow">
-                <div class="p-2">
-                    <img src="https://codewithsadiq.com/public/images/course/1639915439.jpg" alt="">
-                    <hr>
-                    <h2>Python With Data Structure</h2>
-                </div>
-                <div class="bg-teal-800 font-bold text-white w-full p-3 rounded-bl-lg rounded-br-lg">Duration: 4 Months</div>
-            </div>
-        </div>
-        <div class="w-1/6">
-            <div class="bg-white rounded-lg border shadow">
-                <div class="p-2">
-                    <img src="https://codewithsadiq.com/public/images/course/1639911906.jpg" alt="">
-                    <hr>
-                    <h2>Python With Data Structure</h2>
-                </div>
-                <div class="bg-teal-800 font-bold text-white w-full p-3 rounded-bl-lg rounded-br-lg">Duration: 4 Months</div>
-            </div>
-        </div>
-        <div class="w-1/6">
-            <div class="bg-white rounded-lg border shadow">
-                <div class="p-2">
-                    <img src="https://codewithsadiq.com/public/images/course/1639911906.jpg" alt="">
-                    <hr>
-                    <h2>Python With Data Structure</h2>
-                </div>
-                <div class="bg-teal-800 font-bold text-white w-full p-3 rounded-bl-lg rounded-br-lg">Duration: 4 Months</div>
-            </div>
-        </div>
-        <div class="w-1/6">
-            <div class="bg-white rounded-lg border shadow">
-                <div class="p-2">
-                    <img src="https://codewithsadiq.com/public/images/course/1639911906.jpg" alt="">
-                    <hr>
-                    <h2>Python With Data Structure</h2>
-                </div>
-                <div class="bg-teal-800 font-bold text-white w-full p-3 rounded-bl-lg rounded-br-lg">Duration: 4 Months</div>
-            </div>
-        </div>
-        <div class="w-1/6">
-            <div class="bg-white rounded-lg border shadow">
-                <div class="p-2">
-                    <img src="https://codewithsadiq.com/public/images/course/1639911906.jpg" alt="">
-                    <hr>
-                    <h2>Python With Data Structure</h2>
-                </div>
-                <div class="bg-teal-800 font-bold text-white w-full p-3 rounded-bl-lg rounded-br-lg">Duration: 4 Months</div>
-            </div>
-        </div>
+        </a>
+    </div>
+  
+      @endforeach
     </div>
 
 
